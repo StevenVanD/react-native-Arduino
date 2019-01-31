@@ -1,7 +1,7 @@
 import React from "react";
 import { ActivityIndicator, View, FlatList } from "react-native";
 import PropTypes from "prop-types";
-import styles from "./Home.styles";
+import styles from "./styles";
 import { Colors } from "../../../../shared/utils";
 import { Translations } from "../../utils";
 import { Text, ListItem } from "../../components";
