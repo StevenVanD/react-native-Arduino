@@ -12,7 +12,6 @@ const getLabel = (key, inserts = {}) => I18n.t(key, inserts);
 const doesLabelExist = key => getLabel(key).indexOf(key) <= 0;
 
 const getDeviceLanguage = () => {
-  if (DeviceInfo.getDeviceLocale().startsWith('nl')) return 'nl';
   return 'en';
 };
 

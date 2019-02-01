@@ -7,6 +7,9 @@ import { Translations } from "../../utils";
 import { Text, ListItem } from "../../components";
 
 class Home extends React.Component {
+  renderListItem = () => {
+    return (<ListItem />);
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -15,7 +18,7 @@ class Home extends React.Component {
         </Text>
         <FlatList
           data={["dfgdfg", "zerzer", "sdffds"]}
-          renderItem={({ item }) => <ListItem />}
+          renderItem={this.renderListItem}
         />
       </View>
     );

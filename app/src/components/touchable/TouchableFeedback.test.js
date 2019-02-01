@@ -134,17 +134,15 @@ describe('<TouchableFeedback> component', () => {
   });
   jest.useFakeTimers();
   describe('waits 1 second before ending the game', () => {
-    let app: TouchableFeedback;
+    const wrapper = shallow(
+      <TouchableFeedback onPress={() => { }}>
+        <Text>This is touchable!</Text>
+      </TouchableFeedback>
+    );
+    wrapper.simulate('press');
+    wrapper.simulate('press');
 
-    beforeEach(() => {
-      app = new TouchableFeedback();
-    });
-
-    it('should clear message', () => {
-      app.onPress();
-      expect(app.pressed).toBe(false);
-    });
-
-
+    expect(setTimeout).toHaveBeenCalledTimes(1);
+    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 500);
   });
 });

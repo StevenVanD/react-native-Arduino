@@ -13,6 +13,6 @@ jest.mock('react-native-i18n', () => ({
 
 jest.mock('react-native-device-info', () => ({
   getUniqueID: () => { },
-  getDeviceLocale: () => 'en',
+  getDeviceLocale: () => 'nl',
   getModel: () => 'iPhone 8',
 }));
