@@ -38,13 +38,16 @@
     "storybook": "storybook start -p 7007 --projectRoots ../",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch",
+    "test --watch": "jest --watch",
     "validate": "yarn lint && yarn test"
   },
   "jest": {
     "automock": false,
     "preset": "react-native",
-    "setupFiles": [ "./setupJest.js", "../shared/setupJest.js" ],
+    "setupFiles": [
+      "./setupJest.js",
+      "../shared/setupJest.js"
+    ],
     "transform": {
       "^.+\\.js$": "./node_modules/react-native/jest/preprocessor.js"
     }
@@ -59,7 +62,9 @@
   },
   "config": {
     "react-native-storybook-loader": {
-      "searchDir": [ "./src" ],
+      "searchDir": [
+        "./src"
+      ],
       "pattern": "**/**/*.story.js",
       "outputFile": "./storybook/storyLoader.js"
     }

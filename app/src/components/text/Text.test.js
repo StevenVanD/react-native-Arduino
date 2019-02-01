@@ -20,6 +20,10 @@ describe('<Text> component', () => {
     shallowTestHelper(<Text label="ok" bold />);
   });
 
+  describe('renders an underlined text', () => {
+    shallowTestHelper(<Text label="ok" underline />);
+  });
+
   describe('renders a dark color', () => {
     shallowTestHelper(<Text label="ok" black />);
   });
@@ -40,8 +44,20 @@ describe('<Text> component', () => {
     shallowTestHelper(<Text label="ok" error />);
   });
 
+  describe('renders an success color', () => {
+    shallowTestHelper(<Text label="ok" success />);
+  });
+
   describe('renders a lightgrey color', () => {
     shallowTestHelper(<Text label="ok" light />);
+  });
+
+  describe('renders a xxxsmall fontsize', () => {
+    shallowTestHelper(<Text label="ok" xxxsmall />);
+  });
+
+  describe('renders a xxsmall fontsize', () => {
+    shallowTestHelper(<Text label="ok" xxsmall />);
   });
 
   describe('renders a xsmall fontsize', () => {
@@ -62,6 +78,10 @@ describe('<Text> component', () => {
 
   describe('renders a xlarge fontsize', () => {
     shallowTestHelper(<Text label="ok" xlarge />);
+  });
+
+  describe('renders a xxlarge fontsize', () => {
+    shallowTestHelper(<Text label="ok" xxlarge />);
   });
 
   describe('renders a left textAlignment', () => {
