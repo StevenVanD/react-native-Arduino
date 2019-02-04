@@ -48,6 +48,10 @@
       "./setupJest.js",
       "../shared/setupJest.js"
     ],
+    "coveragePathIgnorePatterns": [
+      "./src/utils/test",
+      "./setupJest.js"
+    ],
     "transform": {
       "^.+\\.js$": "./node_modules/react-native/jest/preprocessor.js"
     }

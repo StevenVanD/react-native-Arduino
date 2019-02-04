@@ -122,6 +122,7 @@ describe('<TouchableFeedback> component', () => {
   });
 
   describe('onPress uses throttle', () => {
+    jest.useFakeTimers();
     const mockFunction = jest.fn();
     const wrapper = shallow(
       <TouchableFeedback onPress={mockFunction}>
@@ -131,18 +132,9 @@ describe('<TouchableFeedback> component', () => {
     wrapper.simulate('press');
     wrapper.simulate('press');
     expect(mockFunction).toHaveBeenCalledTimes(1);
+    expect(wrapper.state('pressed')).toBe(true);
+    jest.runOnlyPendingTimers();
+    expect(wrapper.state('pressed')).toBe(false);
   });
-  jest.useFakeTimers();
-  describe('waits 1 second before ending the game', () => {
-    const wrapper = shallow(
-      <TouchableFeedback onPress={() => { }}>
-        <Text>This is touchable!</Text>
-      </TouchableFeedback>
-    );
-    wrapper.simulate('press');
-    wrapper.simulate('press');
 
-    expect(setTimeout).toHaveBeenCalledTimes(1);
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 500);
-  });
 });

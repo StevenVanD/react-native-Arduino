@@ -9,15 +9,17 @@ const THROTTLE = 500;
 class TouchableFeedback extends PureComponent {
   constructor(props) {
     super(props);
-    this.pressed = false;
+    this.state = { pressed: false };
+
+
   }
 
   onPress = () => {
-    if (this.pressed !== true) {
+    if (this.state.pressed !== true) {
       this.props.onPress();
-      this.pressed = true;
+      this.setState({ pressed: true });
       setTimeout(() => {
-        this.pressed = false;
+        this.setState({ pressed: false });
       }, THROTTLE);
     }
   };
