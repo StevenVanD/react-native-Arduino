@@ -7,4 +7,3 @@ export {
   TouchableFeedback,
   ListItem,
 };
-console.log("hey");

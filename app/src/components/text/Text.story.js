@@ -1,26 +1,42 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
+import { View } from 'react-native';
 import { Text } from './Text';
 import CenterView from '../../../storybook/stories/CenterView';
 
 storiesOf('Text', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('default', () => (<Text label="home_description" />))
-  .add('italic', () => (<Text label="home_description" italic />))
-  .add('bold', () => (<Text label="home_description" bold />))
-  .add('dark color', () => (<Text label="home_description" black />))
-  .add('white color', () => (<Text label="home_description" white />))
-  .add('lightGrey color', () => (<Text label="home_description" lightGrey />))
-  .add('primary color', () => (<Text label="home_description" primary />))
-  .add('error color', () => (<Text label="home_description" error />))
-  .add('light color', () => (<Text label="home_description" light />))
-  .add('xsmall fontSize', () => (<Text label="home_description" xsmall />))
-  .add('small fontSize', () => (<Text label="home_description" small />))
-  .add('medium fontSize', () => (<Text label="home_description" medium />))
-  .add('large fontSize', () => (<Text label="home_description" large />))
-  .add('xlarge fontSize', () => (<Text label="home_description" xlarge />))
-  .add('left alignment', () => (<Text label="home_description" left />))
-  .add('right alignment', () => (<Text label="home_description" right />))
-  .add('center alignment', () => (<Text label="home_description" center />))
-  .add('uppercase', () => (<Text label="home_description" uppercase />));
+  .add('default', () => (<Text>A simple text.</Text>))
+  .add('style', () => (<View>
+    <Text>A simple text.</Text>
+    <Text italic>A simple text. italic</Text>
+    <Text bold>A simple text. bold</Text>
+  </View>))
+  .add('color', () => (<View>
+    <Text>A simple text.</Text>
+    <Text black>A simple text. black</Text>
+    <Text white>A simple text. white</Text>
+    <Text lightGrey>A simple text. lightGrey</Text>
+    <Text primary>A simple text. primary</Text>
+    <Text error>A simple text. error</Text>
+    <Text light>A simple text. light</Text>
+  </View>))
+  .add('size', () => (<View>
+    <Text>A simple text.</Text>
+    <Text xxxsmall>A simple text. xxxsmall</Text>
+    <Text xxsmall>A simple text. xxsmall</Text>
+    <Text xsmall>A simple text. xsmall</Text>
+    <Text small>A simple text. small</Text>
+    <Text medium>A simple text. medium</Text>
+    <Text large>A simple text. large</Text>
+    <Text xlarge>A simple text. xlarge</Text>
+    <Text xxlarge>A simple text. xxlarge</Text>
+  </View>))
+  .add('alignment', () => (<View>
+    <Text>A simple text.</Text>
+    <Text left>A simple text. left</Text>
+    <Text right>A simple text. right</Text>
+    <Text center>A simple text. center</Text>
+  </View>))
+  .add('uppercase', () => (<Text uppercase>A simple text. uppercase</Text>));

@@ -2137,6 +2137,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "children": undefined,
       "style": Array [
         Object {},
         Object {
@@ -2165,6 +2166,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": undefined,
         "style": Array [
           Object {},
           Object {

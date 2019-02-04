@@ -3,6 +3,7 @@ import { Text as RNText } from 'react-native';
 import PropTypes from 'prop-types';
 import { Colors } from '../../../../shared/utils';
 import { getLabel } from '../../utils';
+import { log } from 'core-js';
 
 // Helper function to get the font-family based on props. Defaults to regular
 const getFontFamily = props => {
@@ -76,7 +77,7 @@ const getAlignment = props => {
 };
 
 export const Text = ({ style, label, uppercase, ...props }) => {
-  const styles = [ getFontFamily(props), getFontColor(props), getFontSize(props), getAlignment(props), getTextDecorationLine(props), style ];
+  const styles = [getFontFamily(props), getFontColor(props), getFontSize(props), getAlignment(props), getTextDecorationLine(props), style];
 
   if (label) {
     return (
@@ -85,7 +86,7 @@ export const Text = ({ style, label, uppercase, ...props }) => {
       </RNText>
     );
   }
-  return <RNText style={styles} {...props} />;
+  return <RNText style={styles} {...props}>{uppercase ? props.children.toUpperCase() : props.children}</RNText>;
 };
 
 Text.propTypes = {
