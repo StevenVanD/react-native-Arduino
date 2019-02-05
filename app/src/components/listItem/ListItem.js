@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import PropTypes from "prop-types";
-import { Text } from "./../index";
+// import PropTypes from "prop-types";
+import { Text } from "../text/Text";
 
-class ComponentName extends React.PureComponent {
+class ListItem extends React.PureComponent {
   render() {
     return (
       <View>
@@ -15,8 +15,8 @@ class ComponentName extends React.PureComponent {
   }
 }
 
-ComponentName.propTypes = {};
+ListItem.propTypes = {};
 
-ComponentName.defaultProps = {};
+ListItem.defaultProps = {};
 
-export default ComponentName;
+export default ListItem;

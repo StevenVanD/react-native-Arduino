@@ -136,5 +136,4 @@ describe('<TouchableFeedback> component', () => {
     jest.runOnlyPendingTimers();
     expect(wrapper.state('pressed')).toBe(false);
   });
-
 });

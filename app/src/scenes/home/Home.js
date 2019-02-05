@@ -1,15 +1,13 @@
 import React from "react";
-import { ActivityIndicator, View, FlatList } from "react-native";
-import PropTypes from "prop-types";
+import { View, FlatList } from "react-native";
 import styles from "./styles";
-import { Colors } from "../../../../shared/utils";
-import { Translations } from "../../utils";
 import { Text, ListItem } from "../../components";
 
 class Home extends React.Component {
   renderListItem = () => {
     return (<ListItem />);
   }
+
   render() {
     return (
       <View style={styles.container}>

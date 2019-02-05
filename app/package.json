@@ -57,6 +57,7 @@
     }
   },
   "dependencies": {
+    "eslint-config-prettier": "^4.0.0",
     "prop-types": "^15.6.2",
     "react": "16.4.1",
     "react-native": "~0.56.0",

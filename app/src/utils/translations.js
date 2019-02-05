@@ -1,6 +1,4 @@
 import I18n from 'react-native-i18n';
-import DeviceInfo from 'react-native-device-info';
-
 import en from '../../../shared/labels/en';
 import nl from '../../../shared/labels/nl';
 
