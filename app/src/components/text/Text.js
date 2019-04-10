@@ -1,24 +1,26 @@
 import React from 'react';
 import { Text as RNText } from 'react-native';
 import PropTypes from 'prop-types';
+
 import { Colors } from '../../../../shared/utils';
-import { getLabel } from '../../utils';
+
+import { Translations } from '../../utils';
 
 // Helper function to get the font-family based on props. Defaults to regular
-const getFontFamily = props => {
+const getFontFamily = (props) => {
   const fontstyle = {};
   if (props.italic) fontstyle.fontStyle = 'italic';
   if (props.bold) fontstyle.fontWeight = 'bold';
   return fontstyle;
 };
 
-const getTextDecorationLine = props => {
+const getTextDecorationLine = (props) => {
   let textDecorationLine = 'none';
   if (props.underline) textDecorationLine = 'underline';
   return { textDecorationLine };
 };
 
-const getFontColor = props => {
+const getFontColor = (props) => {
   let color = Colors.text;
   if (props.white) color = Colors.white;
   if (props.black) color = Colors.black;
@@ -29,7 +31,7 @@ const getFontColor = props => {
   return { color };
 };
 
-const getFontSize = props => {
+const getFontSize = (props) => {
   let fontSize = 14;
   let lineHeight = 20;
   if (props.xxxsmall) {
@@ -67,7 +69,7 @@ const getFontSize = props => {
   return { fontSize, lineHeight };
 };
 
-const getAlignment = props => {
+const getAlignment = (props) => {
   let textAlign = 'left';
   if (props.center) textAlign = 'center';
   if (props.right) textAlign = 'right';
@@ -76,12 +78,19 @@ const getAlignment = props => {
 };
 
 export const Text = ({ style, label, uppercase, ...props }) => {
-  const styles = [ getFontFamily(props), getFontColor(props), getFontSize(props), getAlignment(props), getTextDecorationLine(props), style ];
+  const styles = [
+    getFontFamily(props),
+    getFontColor(props),
+    getFontSize(props),
+    getAlignment(props),
+    getTextDecorationLine(props),
+    style,
+  ];
 
   if (label) {
     return (
       <RNText style={styles} {...props}>
-        {uppercase ? getLabel(label).toUpperCase() : getLabel(label)}
+        {uppercase ? Translations.getLabel(label).toUpperCase() : Translations.getLabel(label)}
       </RNText>
     );
   }

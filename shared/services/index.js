@@ -1,5 +1,3 @@
 import * as LoginService from './LoginService';
 
-export {
-  LoginService,
-};
+export { LoginService };

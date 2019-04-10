@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import shallowTestHelper from '../../../../shared/utils/test/shallowTestHelper';
+
+import shallowTestHelper from '../../utils/test/shallowTestHelper';
 import { Text } from './Text';
 
 describe('<Text> component', () => {
@@ -77,7 +78,10 @@ describe('<Text> component', () => {
   });
 
   test('should transform a text to uppercase', () => {
-    const wrapper = shallow(<Text uppercase label="ok" />);
-    expect(wrapper.dive().text()).toEqual('OK');
+    const wrapper = shallow(<Text uppercase label='ok' />);
+    expect(wrapper
+      .find('Text')
+      .props()
+      .children).toEqual('OK');
   });
 });

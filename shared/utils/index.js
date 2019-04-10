@@ -1,7 +1,4 @@
 import Colors from './colors';
-import Translations from './translations';
+import Network from './Network';
 
-export {
-  Colors,
-  Translations,
-};
+export { Colors, Network };

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, TouchableNativeFeedback } from 'react-native';
 import { shallow } from 'enzyme';
-import shallowTestHelper from '../../../../shared/utils/test/shallowTestHelper';
+
+import shallowTestHelper from '../../utils/test/shallowTestHelper';
 import mockAndroid from '../../utils/test/mockAndroid';
 import TouchableFeedback from './TouchableFeedback';
 
@@ -9,47 +10,47 @@ describe('<TouchableFeedback> component', () => {
   describe('<TouchableFeedback> component for iOS', () => {
     describe('renders the TouchableFeedback component correctly', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}}>
+        <TouchableFeedback onPress={() => { }}>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a disabled state', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} disabled>
+        <TouchableFeedback onPress={() => { }} disabled>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a highLighted state', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} highLight>
+        <TouchableFeedback onPress={() => { }} highLight>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a borderless ripple', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} borderlessRipple>
+        <TouchableFeedback onPress={() => { }} borderlessRipple>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a custom ripple', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} ripple={TouchableNativeFeedback.Ripple('red', false)}>
+        <TouchableFeedback onPress={() => { }} ripple={TouchableNativeFeedback.Ripple('red', false)}>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders with styling in the androidContainer', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} androidContainerStyle={{ borderRadius: 20 }}>
+        <TouchableFeedback onPress={() => { }} androidContainerStyle={{ borderRadius: 20 }}>
           <Text style={{ padding: 20, borderRadius: 20 }}>This is touchable!</Text>
         </TouchableFeedback>
       );
@@ -63,47 +64,47 @@ describe('<TouchableFeedback> component', () => {
 
     describe('renders the TouchableFeedback component correctly', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}}>
+        <TouchableFeedback onPress={() => { }}>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a disabled state', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} disabled>
+        <TouchableFeedback onPress={() => { }} disabled>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a highLighted state', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} highLight>
+        <TouchableFeedback onPress={() => { }} highLight>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a borderless ripple', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} borderlessRipple>
+        <TouchableFeedback onPress={() => { }} borderlessRipple>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders a custom ripple', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} ripple={TouchableNativeFeedback.Ripple('red', false)}>
+        <TouchableFeedback onPress={() => { }} ripple={TouchableNativeFeedback.Ripple('red', false)}>
           <Text style={{ padding: 10 }}>This is touchable!</Text>
-        </TouchableFeedback>
+        </TouchableFeedback >
       );
     });
 
     describe('renders with styling in the androidContainer', () => {
       shallowTestHelper(
-        <TouchableFeedback onPress={() => {}} androidContainerStyle={{ borderRadius: 20 }}>
+        <TouchableFeedback onPress={() => { }} androidContainerStyle={{ borderRadius: 20 }}>
           <Text style={{ padding: 20, borderRadius: 20 }}>This is touchable!</Text>
         </TouchableFeedback>
       );

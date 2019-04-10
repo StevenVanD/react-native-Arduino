@@ -1,8 +1,8 @@
 import I18n from 'react-native-i18n';
 import DeviceInfo from 'react-native-device-info';
 
-import en from '../../../shared/labels/en';
-import nl from '../../../shared/labels/nl';
+import en from '../../labels/en';
+import nl from '../../labels/nl';
 
 const getLabel = (key, inserts = {}) => I18n.t(key, inserts);
 
@@ -29,4 +29,9 @@ const translations = {
 };
 I18n.translations = translations;
 
-export { doesLabelExist, getDeviceLanguage, getLabel, I18n };
+export default {
+  doesLabelExist,
+  getDeviceLanguage,
+  getLabel,
+  I18n,
+};

@@ -1,8 +1,0 @@
-{
-  "name": "react_reactnative_boilerplate",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "test": "cd app && yarn test && cd .. && cd shared && yarn test && cd .."
-  }
-}

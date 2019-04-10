@@ -1,3 +1,5 @@
-import { getLabel } from './translations';
+import Translations from './translations';
 
-export { getLabel };
+export {
+  Translations,
+};
