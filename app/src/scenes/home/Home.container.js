@@ -14,4 +14,5 @@ const mapDispatchToProps = {
   login: loginActions.login,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;
+// export default connect(mapStateToProps, mapDispatchToProps)(Home);

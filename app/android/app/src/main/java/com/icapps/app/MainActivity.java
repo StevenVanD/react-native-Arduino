@@ -2,6 +2,11 @@ package com.icapps.app;
 
 import com.facebook.react.ReactActivity;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+
+
 public class MainActivity extends ReactActivity {
 
     /**
@@ -12,4 +17,15 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "reactnative_boilerplate";
     }
+
+
+    @Override
+    protected void onCreate(Bundle state){
+    super.onCreate(state);
+    String ip = "192.168.0.129";
+
+    SharedPreferences preferences =
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        preferences.edit().putString("debug_http_host", ip + ":8081").apply();
+}
 }

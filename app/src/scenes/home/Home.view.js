@@ -18,25 +18,25 @@ class Home extends React.Component {
     };
   }
 
-  login = () => {
+  /* login = () => {
     this.props.login({
       email: 'reactnative@icapps.com',
       password: 'reactnative',
     });
-  };
+  }; */
 
-  renderStorybook = () => { this.setState({ storyBooksLoaded: true }); }
+  // renderStorybook = () => { this.setState({ storyBooksLoaded: true }); }
 
   render() {
-    if (this.state.storyBooksLoaded) {
+    /* if (this.state.storyBooksLoaded) {
       return <StorybookUI />;
-    }
+    } */
     return (
 
       < View style={styles.container} >
         <View>
-          <Text center style={styles.lead} label='home_description' />
-
+          <Text> jgjhg</Text>
+          {/*
           <ActivityIndicator animating={this.props.isLoading} size="large" color={Colors.primary} />
 
           {this.props.token && (
@@ -53,16 +53,16 @@ class Home extends React.Component {
                 {Translations.getLabel('home_login_error', { token: this.props.serverError })}
               </Text>
             </View>
-          )}
+          )} */}
         </View>
 
-        <TouchableFeedback style={styles.button} onPress={this.login}>
+        {/* <TouchableFeedback style={styles.button} onPress={this.login}>
           <Text white center bold label="home_action" />
         </TouchableFeedback>
 
         <TouchableFeedback style={styles.button} onPress={this.renderStorybook}>
           <Text white center bold label="storybook_action" />
-        </TouchableFeedback>
+        </TouchableFeedback> */}
       </View >
     );
   }
