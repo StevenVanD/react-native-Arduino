@@ -3,7 +3,11 @@ import ReactTV from 'react-tv';
 
 class ReactTVApp extends React.Component {
   render() {
-    return <div>Arduino</div>;
+    return (
+      <div>
+        <h1>Halloo</h1>
+        Arduino
+    </div>);
   }
 }
 
